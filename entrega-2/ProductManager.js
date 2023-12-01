@@ -38,5 +38,8 @@ class ProductManager {
     deleteProduct(id){
 
     }
+    updateProduct(id,content){
+
+    }
 }
 export {ProductManager}
