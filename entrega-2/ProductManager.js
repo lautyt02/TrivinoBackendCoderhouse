@@ -36,3 +36,4 @@ class ProductManager {
         return this.#products.find(product => product.id === id) ?? `No existe un producto con el id: ${id}`
     }
 }
+export {ProductManager}
