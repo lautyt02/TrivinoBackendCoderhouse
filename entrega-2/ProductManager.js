@@ -1,8 +1,12 @@
+//Adding fs
 const fs = require('fs')
+//Class Creation
 class ProductManager {
+    //Properties
     path
     #id
     #products
+    //Constructor
     constructor() {
         this.path = './products.json'
         const createFile = async () => {
@@ -12,6 +16,16 @@ class ProductManager {
         this.#id = 1
         this.#products = []
     }
+    //Other methods
+    //Extras
+    findIndex(id){
+        this.getProducts()
+        return this.#products.findIndex(product => product.id === id)
+    }
+    async #writeFile(){
+        await fs.promises.writeFile(this.path, this.#products.map(JSON.stringify))
+    }
+    //Required by exercise
     addProduct(title, description, price, thumbnail, code, stock) {
         this.getProducts()
         let required = typeof (title) == "string"
@@ -50,17 +64,6 @@ class ProductManager {
         this.getProducts()
         return this.#products.find(product => product.id === id) ?? `No existe un producto con el id: ${id}`
     }
-    deleteProduct(id) {
-        const findIndexResult = this.findIndex(id)
-        if (findIndexResult != -1) {
-            this.#products.splice(findIndexResult,1)
-            this.#writeFile()
-        }   
-    }
-    findIndex(id){
-        this.getProducts()
-        return this.#products.findIndex(product => product.id === id)
-    }
     updateProduct(id, content) {
         this.getProducts()
         const findIndexResult = this.findIndex(id)
@@ -77,8 +80,11 @@ class ProductManager {
             this.#writeFile()
         }
     }
-    async #writeFile(){
-        await fs.promises.writeFile(this.path, this.#products.map(JSON.stringify))
+    deleteProduct(id) {
+        const findIndexResult = this.findIndex(id)
+        if (findIndexResult != -1) {
+            this.#products.splice(findIndexResult,1)
+            this.#writeFile()
+        }   
     }
 }
-export { ProductManager }
