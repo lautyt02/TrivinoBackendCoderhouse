@@ -35,5 +35,8 @@ class ProductManager {
     getProductById(id) {
         return this.#products.find(product => product.id === id) ?? `No existe un producto con el id: ${id}`
     }
+    deleteProduct(id){
+
+    }
 }
 export {ProductManager}
