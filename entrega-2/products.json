@@ -1,0 +1,5 @@
+[
+	{"id":1,"title":"Tux modificado","description":"mascota del SO Linux","price":5000,"thumbnail":"/images/tux.png","code":1500,"stock":9999},
+	{"id":3,"title":"Linux Mint","description":"Distro Linux de desarrollo comunitario","price":10000,"thumbnail":"/images/popos.png","code":1700,"stock":1500},
+	{"id":4,"title":"The Unlicense","description":"Licencia para ceder tu código/contribuciones al Dominio Público","price":10000,"thumbnail":"/images/popos.png","code":2000,"stock":1}
+]
