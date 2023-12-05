@@ -13,9 +13,6 @@ class ProductManager {
         this.#id = 1
         this.#products = []
         this.#writeFile()
-        // fs.promises.writeFile(this.path, '').then(
-        //     this.#id = 1
-        // ).then(this.#products = []).catch(console.error('Error al crear Archivo'))
     }
     //Other methods
     //Extras
