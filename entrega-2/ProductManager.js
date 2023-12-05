@@ -9,12 +9,12 @@ class ProductManager {
     //Constructor
     constructor() {
         this.path = './products.json'
-        const createFile = async () => {
-            await fs.promises.writeFile(this.path, '')
-        }
-        createFile()
+        fs.writeFileSync(this.path, '')
         this.#id = 1
         this.#products = []
+        // fs.promises.writeFile(this.path, '').then(
+        //     this.#id = 1
+        // ).then(this.#products = []).catch(console.error('Error al crear Archivo'))
     }
     //Other methods
     //Extras
@@ -35,8 +35,8 @@ class ProductManager {
         await fs.promises.writeFile(this.path, arrayJSON)
     }
     // //Required by exercise
-    addProduct(title, description, price, thumbnail, code, stock) {
-        this.getProducts()
+    async addProduct(title, description, price, thumbnail, code, stock) {
+        await this.getProducts()
         let required = typeof (title) == "string"
         required = required && (typeof (description) == "string")
         required = required && (typeof (price) == "number")
@@ -54,7 +54,7 @@ class ProductManager {
                     code,
                     stock
                 })
-                this.#writeFile()
+                await this.#writeFile()
             }
             else {
                 console.error("Ya existe un producto con este valor de code")
@@ -118,6 +118,6 @@ const tareasAsincronas = async () => {
     //Eliminar Producto
     await myProductManager.deleteProduct(2)
     //Actualizar Producto
-    await myProductManager.updateProduct(1,{title:"Tux modificado",description:"mascota del SO Linux",price:5000,thumbnail:"/images/tux.png",code:1500,stock:9999},)
+    await myProductManager.updateProduct(1, { title: "Tux modificado", description: "mascota del SO Linux", price: 5000, thumbnail: "/images/tux.png", code: 1500, stock: 9999 },)
 }
 tareasAsincronas()
