@@ -1,5 +1,6 @@
 //Adding fs
-const fs = require('fs')
+import fs from 'fs'
+//const fs = require('fs')
 //Class Creation
 export class ProductManager {
     //Properties
