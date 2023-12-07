@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/lautyt02/TrivinoBackendCoderhouse/issues"
   },
-  "homepage": "https://github.com/lautyt02/TrivinoBackendCoderhouse/tree/main#readme"
+  "homepage": "https://github.com/lautyt02/TrivinoBackendCoderhouse/tree/main#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
