@@ -7,7 +7,7 @@ const app = express()
 app.use(express.urlencoded({extended: true}))
 //Requests
 app.get('products',async (req,res)=>{
-    const {limit} = req.query
+    const limit = req.query.limit
     const myProducts = await myProductManager.getProducts()
     if(!limit){
         let myLimitedProducts =[]
@@ -17,6 +17,10 @@ app.get('products',async (req,res)=>{
         res.send(myLimitedProducts)
     }
     res.send(myProducts)
+})
+app.get('products/:pid',async (req,res)=>{
+    const id=req.params.pid
+    res.send(await myProductManager.getProductById(id))
 })
 //Run Server
 app.listen(8080,()=>console.log('server runing'))
