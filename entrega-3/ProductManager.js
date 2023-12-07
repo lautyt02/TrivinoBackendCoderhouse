@@ -1,7 +1,7 @@
 //Adding fs
 const fs = require('fs')
 //Class Creation
-class ProductManager {
+export class ProductManager {
     //Properties
     path
     #id
@@ -94,28 +94,3 @@ class ProductManager {
         }
     }
 }
-
-//Execution
-//Creacion de objeto perteneciente a ProductManager
-const myProductManager = new ProductManager()
-const tareasAsincronas = async () => {
-    // Agregado de varios Productos
-    await myProductManager.addProduct("Tux", "mascota del SO Linux", 5000, '/images/tux.png', 1500, 9999)
-    await myProductManager.addProduct("Pop_OS", "Distro Linux Desarrollada por System76", 10000, '/images/popos.png', 1600, 1000)
-    await myProductManager.addProduct("Linux Mint", "Distro Linux de desarrollo comunitario", 10000, '/images/popos.png', 1700, 1500)
-    await myProductManager.addProduct("The Unlicense", "Licencia para ceder tu código/contribuciones al Dominio Público", 10000, '/images/popos.png', 2000, 1)
-    //Intentar agregar un elemento sin todos los parametros
-    await myProductManager.addProduct('', "mascota del SO Linux", 0, '/images/tux.png', 1550)
-    //Intentar agregar un elemento con un code existente
-    await myProductManager.addProduct("Tux 3", "mascota del SO Linux", 5000, '/images/tux.png', 1500, 9999)
-    //Buscar producto por id
-    console.log('buscar por id')
-    console.log(await myProductManager.getProductById(3))
-    //Buscar producto por id inexistente
-    console.log(await myProductManager.getProductById(1000))
-    //Eliminar Producto
-    await myProductManager.deleteProduct(2)
-    //Actualizar Producto
-    await myProductManager.updateProduct(1, { title: "Tux modificado", description: "mascota del SO Linux", price: 5000, thumbnail: "/images/tux.png", code: 1500, stock: 9999 },)
-}
-tareasAsincronas()
