@@ -9,10 +9,20 @@ class ProductManager {
     //Constructor
     constructor() {
         this.path = './products.json'
-        fs.writeFileSync(this.path, '')
         this.#id = 1
         this.#products = []
-        this.#writeFile()
+        if (fs.existsSync(this.path)) {
+            this.getProducts()
+        }
+        else {
+            fs.writeFileSync(this.path, '')
+            this.#writeFile()
+        }
+        // this.path = './products.json'
+        // fs.writeFileSync(this.path, '')
+        // this.#id = 1
+        // this.#products = []
+        // this.#writeFile()
     }
     //Other methods
     //Extras
@@ -100,10 +110,18 @@ class ProductManager {
 const myProductManager = new ProductManager()
 const tareasAsincronas = async () => {
     // Agregado de varios Productos
-    await myProductManager.addProduct("Tux", "mascota del SO Linux", 5000, '/images/tux.png', 1500, 9999)
-    await myProductManager.addProduct("Pop_OS", "Distro Linux Desarrollada por System76", 10000, '/images/popos.png', 1600, 1000)
-    await myProductManager.addProduct("Linux Mint", "Distro Linux de desarrollo comunitario", 10000, '/images/popos.png', 1700, 1500)
-    await myProductManager.addProduct("The Unlicense", "Licencia para ceder tu código/contribuciones al Dominio Público", 10000, '/images/popos.png', 2000, 1)
+    await myProductManager.addProduct("Tux 1", "mascota del SO Linux", 5000, '/images/tux.png', 1500, 9999)
+    await myProductManager.addProduct("Pop_OS 1", "Distro Linux Desarrollada por System76", 10000, '/images/popos.png', 1600, 1000)
+    await myProductManager.addProduct("Linux Mint 1", "Distro Linux de desarrollo comunitario", 10000, '/images/popos.png', 1700, 1500)
+    await myProductManager.addProduct("The Unlicense 1", "Licencia para ceder tu código/contribuciones al Dominio Público", 10000, '/images/popos.png', 2000, 1)
+    await myProductManager.addProduct("Tux 2", "mascota del SO Linux", 5000, '/images/tux.png', 1501, 9999)
+    await myProductManager.addProduct("Pop_OS 2", "Distro Linux Desarrollada por System76", 10000, '/images/popos.png', 1601, 1000)
+    await myProductManager.addProduct("Linux Mint 2", "Distro Linux de desarrollo comunitario", 10000, '/images/popos.png', 1701, 1500)
+    await myProductManager.addProduct("The Unlicense 2", "Licencia para ceder tu código/contribuciones al Dominio Público", 10000, '/images/popos.png', 2001, 1)
+    await myProductManager.addProduct("Tux 3", "mascota del SO Linux", 5000, '/images/tux.png', 1502, 9999)
+    await myProductManager.addProduct("Pop_OS 3", "Distro Linux Desarrollada por System76", 10000, '/images/popos.png', 1602, 1000)
+    await myProductManager.addProduct("Linux Mint 3", "Distro Linux de desarrollo comunitario", 10000, '/images/popos.png', 1702, 1500)
+    await myProductManager.addProduct("The Unlicense 3", "Licencia para ceder tu código/contribuciones al Dominio Público", 10000, '/images/popos.png', 2002, 1)
     //Intentar agregar un elemento sin todos los parametros
     await myProductManager.addProduct('', "mascota del SO Linux", 0, '/images/tux.png', 1550)
     //Intentar agregar un elemento con un code existente
