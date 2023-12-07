@@ -8,11 +8,16 @@ export class ProductManager {
     #products
     //Constructor
     constructor() {
-        this.path = './products.json'
-        fs.writeFileSync(this.path, '')
+        this.path = '../data/products.json'
         this.#id = 1
         this.#products = []
-        this.#writeFile()
+        if (fs.existsSync(this.path)) {
+            this.getProducts()
+        }
+        else {
+            fs.writeFileSync(this.path, '')
+            this.#writeFile()
+        }
     }
     //Other methods
     //Extras
