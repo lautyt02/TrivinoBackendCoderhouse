@@ -69,7 +69,7 @@ export class ProductManager {
 
     }
     async getProducts() {
-        this.#products = JSON.parse(await fs.promises.readFile(this.path, 'utf-8'))
+        return this.#products = JSON.parse(await fs.promises.readFile(this.path, 'utf-8'))
     }
     async getProductById(id) {
         await this.getProducts()
