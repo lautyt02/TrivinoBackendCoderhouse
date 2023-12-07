@@ -1,5 +1,14 @@
 [
-	{"id":1,"title":"Tux","description":"mascota del SO Linux","price":5000,"thumbnail":"/images/tux.png","code":1500,"stock":9999},
-	{"id":3,"title":"Linux Mint","description":"Distro Linux de desarrollo comunitario","price":10000,"thumbnail":"/images/popos.png","code":1700,"stock":1500},
-	{"id":4,"title":"The Unlicense","description":"Licencia para ceder tu código/contribuciones al Dominio Público","price":10000,"thumbnail":"/images/popos.png","code":2000,"stock":1}
+	{"id":1,"title":"Tux 1","description":"mascota del SO Linux","price":5000,"thumbnail":"/images/tux.png","code":1500,"stock":9999},
+	{"id":2,"title":"Pop_OS 1","description":"Distro Linux Desarrollada por System76","price":10000,"thumbnail":"/images/popos.png","code":1600,"stock":1000},
+	{"id":3,"title":"Linux Mint 1","description":"Distro Linux de desarrollo comunitario","price":10000,"thumbnail":"/images/popos.png","code":1700,"stock":1500},
+	{"id":4,"title":"The Unlicense 1","description":"Licencia para ceder tu código/contribuciones al Dominio Público","price":10000,"thumbnail":"/images/popos.png","code":2000,"stock":1},
+	{"id":5,"title":"Tux 2","description":"mascota del SO Linux","price":5000,"thumbnail":"/images/tux.png","code":1501,"stock":9999},
+	{"id":6,"title":"Pop_OS 2","description":"Distro Linux Desarrollada por System76","price":10000,"thumbnail":"/images/popos.png","code":1601,"stock":1000},
+	{"id":7,"title":"Linux Mint 2","description":"Distro Linux de desarrollo comunitario","price":10000,"thumbnail":"/images/popos.png","code":1701,"stock":1500},
+	{"id":8,"title":"The Unlicense 2","description":"Licencia para ceder tu código/contribuciones al Dominio Público","price":10000,"thumbnail":"/images/popos.png","code":2001,"stock":1},
+	{"id":9,"title":"Tux 3","description":"mascota del SO Linux","price":5000,"thumbnail":"/images/tux.png","code":1502,"stock":9999},
+	{"id":10,"title":"Pop_OS 3","description":"Distro Linux Desarrollada por System76","price":10000,"thumbnail":"/images/popos.png","code":1602,"stock":1000},
+	{"id":11,"title":"Linux Mint 3","description":"Distro Linux de desarrollo comunitario","price":10000,"thumbnail":"/images/popos.png","code":1702,"stock":1500},
+	{"id":12,"title":"The Unlicense 3","description":"Licencia para ceder tu código/contribuciones al Dominio Público","price":10000,"thumbnail":"/images/popos.png","code":2002,"stock":1}
 ]
