@@ -1,32 +1,14 @@
 //Imports
-import { ProductManager } from "./ProductManager.js"
 import express from 'express'
+import { productsRouter } from "./routes/products.router.js"
+import { cartsRouter } from "./routes/carts.router.js"
 //Config
-const myProductManager = new ProductManager()
+const port=8080
 const app = express()
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static('../public'))
+const server = app.listen(port, () => console.log('server runing'))//Run Server
 //Requests
-app.get('/products', async (req, res) => {
-    let limit = req.query.limit
-    const myProducts = await myProductManager.getProducts()
-    if(limit>myProducts.length){
-        limit=myProducts.length
-    }
-    if (limit) {
-        let myLimitedProducts = []
-        for (let i = 0; i < limit; i++) {
-            myLimitedProducts.push(myProducts[i])
-        }
-        res.send(myLimitedProducts)
-    }
-    else {
-        res.send(myProducts)
-    }
-
-})
-app.get('/products/:pid', async (req, res) => {
-    const id = parseInt(req.params.pid)
-    res.send(await myProductManager.getProductById(id))
-})
-//Run Server
-app.listen(8080, () => console.log('server runing'))
+app.use('/api/products/', productsRouter)
+app.use('/api/carts/', cartsRouter)
