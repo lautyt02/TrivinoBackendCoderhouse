@@ -1,7 +1,7 @@
 {
-  "name": "entrega-3",
+  "name": "entrega-4",
   "version": "1.0.0",
-  "description": "Entrega 3 del curso de programación BackEnd de coderhouse",
+  "description": "Entrega 4 del curso de programación BackEnd de coderhouse",
   "main": "app.js",
   "type": "module",
   "scripts": {
