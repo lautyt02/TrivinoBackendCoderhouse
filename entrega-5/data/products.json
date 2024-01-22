@@ -1,8 +1,9 @@
 [
-	{"id":1,"title":"Prueba 1","description":"Prueba POST desde Insomnia","code":"1001","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]},
+	{"id":1,"title":"Prueba 1 Modificado","description":"Prueba PUT desde Insomnia","code":"1006","price":10000,"status":true,"stock":160,"category":"test","thumbnails":["ruta 1","ruta 2"]},
 	{"id":2,"title":"Prueba 2","description":"Prueba POST desde Insomnia","code":"1002","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]},
 	{"id":3,"title":"Prueba 3 Modificado","description":"Prueba PUT desde Insomnia","code":"1006","price":20000,"status":true,"stock":160,"category":"test","thumbnails":["ruta 1","ruta 2"]},
-	{"id":4,"title":"Prueba 4","description":"Prueba POST desde Insomnia","code":"1004","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]},
+	{"id":4,"title":"Prueba 4 Modificado","description":"Prueba PUT desde Insomnia","code":"1006","price":10000,"status":true,"stock":160,"category":"test","thumbnails":["ruta 1","ruta 2"]},
 	{"id":6,"title":"Prueba 6","description":"Prueba POST desde Insomnia","code":"1007","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]},
-	{"id":7,"title":"Prueba 7","description":"Prueba POST desde Insomnia","code":"1008","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]}
+	{"id":7,"title":"Prueba 7","description":"Prueba POST desde Insomnia","code":"1008","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]},
+	{"id":15,"title":"Prueba 8","description":"Prueba POST desde Insomnia","code":"2000","price":10000,"status":true,"stock":150,"category":"test","thumbnails":["ruta 1","ruta 2"]}
 ]
