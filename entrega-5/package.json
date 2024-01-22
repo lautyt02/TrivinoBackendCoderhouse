@@ -1,7 +1,7 @@
 {
-  "name": "entrega-4",
+  "name": "entrega-5",
   "version": "1.0.0",
-  "description": "Entrega 4 del curso de programación BackEnd de coderhouse",
+  "description": "Entrega 5 del curso de programación BackEnd de coderhouse",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/lautyt02/TrivinoBackendCoderhouse/tree/main#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "socket.io": "^4.7.4"
   }
 }
