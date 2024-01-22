@@ -1,6 +1,6 @@
 //Imports
 import { Router, response } from "express"
-import { CartManager } from "../CartManager.js"
+import { CartManager } from "../classes/CartManager.js"
 //Declaraciones
 const cartsRouter = Router()
 const myCartManager = new CartManager()
