@@ -1,5 +1,5 @@
 //Imports
-import { Router, response } from "express"
+import { Router } from "express"
 import { CartManager } from "../classes/CartManager.js"
 //Declaraciones
 const cartsRouter = Router()
@@ -30,7 +30,7 @@ cartsRouter.post('/:cid/product/:pid', async (req, res) => {
 cartsRouter.post('/', async (req, res) => {
     const { products } = await req.body
     const message = await myCartManager.addCart(products)
-    res.json({status:"succes", message,})
+    res.json({ status: "succes", message, })
 })
 //EXPORT
 export { cartsRouter }
