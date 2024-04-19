@@ -13,16 +13,6 @@ cartsRouter.get('/:cid', async (req, res) => {
         res.status(400).json({ error, })
     }
 })
-cartsRouter.get('/:cid/product/:pid', async (req, res) => {
-    const cid = req.params.cid
-    const pid = parseInt(req.params.pid)
-    try {
-        const cart = await cartsModel.find({ $and: [{ _id: cid }, { products: { $elemMatch: { productId: pid } } }] })//{ _id: cid, 'products.productId': pid  }
-        res.json({ status: "success", cart, })
-    } catch (error) {
-        res.status(400).json({ error, })
-    }
-})
 //POSTs
 cartsRouter.post('/:cid/product/:pid', async (req, res) => {
     const cid = req.params.cid
